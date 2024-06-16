@@ -16,7 +16,8 @@ col1, col2, col3 = st.columns(3)
 
 #当選ゲーム数の入力
 with col1:
-    st.subheader("ゲーム数")
+    # st.subheader("ゲーム数")
+    game_num = st.number_input(label="ゲーム数")
 
 #推測モードの入力
 with col2:
