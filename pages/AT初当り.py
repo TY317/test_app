@@ -11,3 +11,17 @@ import streamlit as st
 st.header("初当りのデータメモ")
 
 ##### 初当りのデータを入力し、登録するフォーム
+# 3列のカラムを作成
+col1, col2, col3 = st.columns(3)
+
+#当選ゲーム数の入力
+with col1:
+    st.subheader("ゲーム数")
+
+#推測モードの入力
+with col2:
+    st.subheader("推測モード")
+
+#当選契機の入力
+with col3:
+    st.subheader("当選契機")
