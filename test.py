@@ -22,14 +22,14 @@ with st.form(key='new_play'):
 
         ##### 通常時中段ベル用
         #通常時中段ベルの回数を保存するcsvファイル
-        # nomal_center_bell_df = pd.DataFrame(data=[0],columns=["中段ベル回数"])
-        nomal_center_bell_df = pd.DataFrame(columns=["中段ベル回数"])
+        nomal_center_bell_df = pd.DataFrame(data=[0],columns=["中段ベル回数"])
+        # nomal_center_bell_df = pd.DataFrame(columns=["中段ベル回数"])
         nomal_center_bell_df.to_csv("./pages/nomal_center_bell_df.csv", index=False)
 
         ##### AT中の中段ベル用
         #AT中の中段ベルの回数を保存するcsvファイル
-        # at_center_bell_df = pd.DataFrame(data=[0], columns=["中段ベル回数"])
-        at_center_bell_df = pd.DataFrame(columns=["中段ベル回数"])
+        at_center_bell_df = pd.DataFrame(data=[0], columns=["中段ベル回数"])
+        # at_center_bell_df = pd.DataFrame(columns=["中段ベル回数"])
         at_center_bell_df.to_csv("./pages/at_center_bell_df.csv", index=False)
         
 st.caption("ver1.0.0")
