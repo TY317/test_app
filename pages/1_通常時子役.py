@@ -4,6 +4,7 @@ import os
 import random
 import uuid
 import getpass
+from streamlit_cookies_manager import EncryptedCookieManager
 
 ##### ページの内容 #####
 # 通常時の中段ベルカウント用
@@ -50,6 +51,20 @@ st.write(st.session_state.uuid)
 #################################
 username = getpass.getuser()
 st.write(username)
+
+#################################
+##### クッキーでの管理 ###############
+#################################
+cookies = EncryptedCookieManager(prefix="streamlit_app_", password="ty0317")
+if not cookies.ready():
+    st.stop()
+
+if "session_id" not in cookies:
+    cookies["session_id"] = str(uuid.uuid4())
+    cookies.save()
+
+cookie_id = cookies["session_id"]
+st.write(cookie_id)
 
 #################################
 ##### csvファイルの読み込み、なければ作る
