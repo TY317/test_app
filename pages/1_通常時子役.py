@@ -3,6 +3,7 @@ import pandas as pd
 import os
 import random
 import uuid
+import getpass
 
 ##### ページの内容 #####
 # 通常時の中段ベルカウント用
@@ -43,6 +44,12 @@ st.write(st.session_state.uuid)
 #csvのファイルパスを定義
 # session_id = st.session_state["session_id"]
 # csv_file_path = f"./csv/normal_center_bell_count_{session_id}.csv"
+
+#################################
+##### ユーザー名 ###############
+#################################
+username = getpass.getuser()
+st.write(username)
 
 #################################
 ##### csvファイルの読み込み、なければ作る
